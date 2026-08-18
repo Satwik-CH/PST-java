@@ -1,0 +1,14 @@
+class Checker implements java.util.Comparator<Player> {
+
+    @Override
+    public int compare(Player a, Player b) {
+
+        // First: score in decreasing order
+        if (a.score != b.score) {
+            return b.score - a.score;
+        }
+
+        // If scores are equal: name in alphabetical order
+        return a.name.compareTo(b.name);
+    }
+}
